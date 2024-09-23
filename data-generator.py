@@ -9,16 +9,16 @@ def generate_data(num_rows):
     data = []
     for _ in range(num_rows):
         row = [
-            random.randint(100, 180),  # sbp (systolic blood pressure) - presión sistólica
-            random.choice([0, 1]),     # Tobacco (0 = no, 1 = yes) - Tabaco (0 = no, 1 = sí)
-            round(random.uniform(1.0, 6.0), 2),  # ldl (low-density lipoprotein cholesterol) - colesterol LDL
-            round(random.uniform(15.0, 45.0), 2),  # Adiposity (body fat level) - Adiposidad (nivel de grasa corporal)
-            random.choice(['Absent', 'Present']),  # Family history (Absent or Present) - Historial familiar (Ausente o Presente)
-            random.randint(13, 78),   # Type (blood type or similar) - Tipo (grupo sanguíneo o similar)
-            round(random.uniform(14.70, 46.58), 2),  # Obesity (Absent or Present) - Obesidad (Ausente o Presente)
-            round(random.uniform(0, 50), 2),  # Alcohol consumption (grams per day) - Consumo de alcohol (gramos por día)
-            random.randint(20, 80),  # Age (years) - Edad (años)
-            random.choice([0, 1])   # chd (coronary heart disease: 0 = no, 1 = yes) - Enfermedad coronaria (0 = no, 1 = sí)
+            random.randint(101, 218),  # sbp (systolic blood pressure) - presión sistólica
+            round(random.uniform(0.00, 31.20), 2),  # Tobacco (kg) - Tabaco (kg acumulado)
+            round(random.uniform(0.98, 15.33), 2),  # ldl (low-density lipoprotein cholesterol) - colesterol LDL
+            round(random.uniform(6.64, 42.49), 2),  # Adiposity (body fat level) - Adiposidad (nivel de grasa corporal)
+            random.choice(['Present', 'Absent']),  # Family history (Present or Absent) - Historial familiar (Presente o Ausente)
+            random.randint(13, 78),  # Type (numeric value) - Tipo (valor numérico)
+            round(random.uniform(14.70, 46.58), 2),  # Obesity - Obesidad (rango numérico)
+            round(random.uniform(0.00, 147.19), 2),  # Alcohol consumption (grams per day) - Consumo de alcohol (gramos por día)
+            random.randint(15, 64),  # Age (years) - Edad (años)
+            random.choice([0, 1])  # chd (coronary heart disease: 0 = no, 1 = yes) - Enfermedad coronaria (0 = no, 1 = sí)
         ]
         data.append(row)
     return data
