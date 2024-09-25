@@ -29,6 +29,7 @@ if language == "English":
     probability_label = 'Probability of prediction'
     no_heart_problems_text = 'The person has no heart problems'
     heart_problems_text = 'The person has heart problems'
+    show_trained_label = 'Show trained data'
 else:
     title = 'Aplicación para predecir enfermedades del corazón'
     sidebar_header = 'Datos ingresados por el usuario'
@@ -49,6 +50,7 @@ else:
     probability_label = 'Probabilidad de la predicción'
     no_heart_problems_text = 'La persona no tiene problemas cardíacos'
     heart_problems_text = 'La persona tiene problemas cardíacos'
+    show_trained_label = 'Mostrar datos entrenados'
 
 # Title of the app
 st.title(title)
@@ -91,16 +93,7 @@ def user_input_features():
 
 # Load input data (from CSV or manually)
 if uploaded_file:
-    try:
-        input_df = pd.read_csv(uploaded_file)
-        # Verificar si las columnas esperadas están presentes
-        expected_columns = ['sbp', 'Tobacco', 'ldl', 'Adiposity', 'Family', 'Type', 'Obesity', 'Alcohol', 'Age']
-        if not all(col in input_df.columns for col in expected_columns):
-            st.error("El archivo CSV no contiene las columnas requeridas.")
-            st.stop()
-    except Exception as e:
-        st.error(f"Error al cargar el archivo CSV: {e}")
-        st.stop()
+    input_df = pd.read_csv(uploaded_file)
 else:
     input_df = user_input_features()
 
@@ -115,21 +108,28 @@ st.write(input_df)
 model = load_model()
 prediction, prediction_probability = make_prediction(model, input_df)
 
-# Display prediction and probability in the interface
+# Display prediction and probability in the interface with improved layout
 col1, col2 = st.columns(2)
+
 with col1:
     st.subheader(prediction_label)
-    st.write(prediction)
     
-with col2: 
-    st.subheader(probability_label)
-    st.write(prediction_probability)
+    if prediction == 0:
+        st.success(no_heart_problems_text)  # Use green success box for no heart problems
+        st.metric(label="Prediction", value="No")
+    else:
+        st.error(heart_problems_text)  # Use red error box for heart problems
+        st.metric(label="Prediction", value="Yes")
 
-# Show whether the person has heart problems or not according to the prediction
-if prediction == 0:
-    st.subheader(no_heart_problems_text)
-else:
-    st.subheader(heart_problems_text)
+with col2:
+    st.subheader(probability_label)
+    st.metric(label="Probability (%)", value=f"{prediction_probability[0][1] * 100:.2f}%")  # Show probability with 2 decimal places
 
 # Divider
 st.markdown("""___""")
+
+# Show the trained dataset in an expander
+with st.expander(show_trained_label):
+    # Load and display the dataset used to train the model
+    trained_data = pd.read_csv('heart-data.csv')
+    st.dataframe(trained_data)
