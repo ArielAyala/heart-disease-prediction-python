@@ -22,6 +22,7 @@ You can see a demo [here](https://arielayala-heart-disease-prediction-python-app
 ## Technologies Used
 
 - **Python**
+- **Streamlit**
 - **Pandas**
 - **Scikit-learn**
 - **Matplotlib**
