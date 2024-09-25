@@ -1,4 +1,5 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://arielayala-heart-disease-prediction-python-app-streamlit-rtie9k.streamlit.app/)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-003B57?style=for-the-badge&logo=matplotlib&logoColor=white)
@@ -8,6 +9,8 @@
 ## Project Description
 
 This project aims to predict the presence of heart disease in patients using machine learning techniques. It is based on a dataset that includes various health features and is implemented using Python and popular libraries like Pandas, Scikit-learn, and Matplotlib.
+
+You can see a demo [here](https://arielayala-heart-disease-prediction-python-app-streamlit-rtie9k.streamlit.app/)
 
 ## Features
 
