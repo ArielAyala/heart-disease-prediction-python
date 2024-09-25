@@ -2,7 +2,7 @@
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://arielayala-heart-disease-prediction-python-app-streamlit-rtie9k.streamlit.app/)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-003B57?style=for-the-badge&logo=matplotlib&logoColor=white)
+![Pickle](https://img.shields.io/badge/Pickle-FFCA28?style=for-the-badge&logo=python&logoColor=black)
 
 # Heart Disease Prediction
 
@@ -25,7 +25,7 @@ You can see a demo [here](https://arielayala-heart-disease-prediction-python-app
 - **Streamlit**
 - **Pandas**
 - **Scikit-learn**
-- **Matplotlib**
+- **Pickle**
 
 ## Installation
 
