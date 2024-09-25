@@ -91,7 +91,16 @@ def user_input_features():
 
 # Load input data (from CSV or manually)
 if uploaded_file:
-    input_df = pd.read_csv(uploaded_file)
+    try:
+        input_df = pd.read_csv(uploaded_file)
+        # Verificar si las columnas esperadas están presentes
+        expected_columns = ['sbp', 'Tobacco', 'ldl', 'Adiposity', 'Family', 'Type', 'Obesity', 'Alcohol', 'Age']
+        if not all(col in input_df.columns for col in expected_columns):
+            st.error("El archivo CSV no contiene las columnas requeridas.")
+            st.stop()
+    except Exception as e:
+        st.error(f"Error al cargar el archivo CSV: {e}")
+        st.stop()
 else:
     input_df = user_input_features()
 
