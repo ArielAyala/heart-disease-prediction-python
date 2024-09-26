@@ -6,6 +6,10 @@
 
 # Predicción de Enfermedades del Corazón
 
+<div align="center">
+  <img src="preview.jpg" width="500" height="auto">
+</div>
+
 ## Descripción del Proyecto
 
 Este proyecto tiene como objetivo predecir la presencia de enfermedades del corazón en pacientes utilizando técnicas de aprendizaje automático. Se basa en un conjunto de datos que incluye diversas características de salud y está implementado utilizando Python y bibliotecas populares como Pandas, Scikit-learn y Matplotlib.

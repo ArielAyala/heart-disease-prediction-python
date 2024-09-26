@@ -6,6 +6,10 @@
 
 # Heart Disease Prediction
 
+<div align="center">
+  <img src="preview.jpg" width="500" height="auto">
+</div>
+
 ## Project Description
 
 This project aims to predict the presence of heart disease in patients using machine learning techniques. It is based on a dataset that includes various health features and is implemented using Python and popular libraries like Pandas, Scikit-learn, and Matplotlib.
