@@ -12,7 +12,7 @@
 
 ## Project Description
 
-This project aims to predict the presence of heart disease in patients using machine learning techniques. It is based on a dataset that includes various health features and is implemented using Python and popular libraries like Pandas, Scikit-learn, and Matplotlib.
+This project aims to predict the presence of heart disease in patients using machine learning techniques. It is based on a dataset that includes various health features and is implemented using Python and popular libraries like Pandas, Scikit-learn, and Streamlit.
 
 You can see a demo [here](https://arielayala-heart-disease-prediction-python-app-streamlit-rtie9k.streamlit.app/)
 

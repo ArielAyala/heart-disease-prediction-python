@@ -12,7 +12,7 @@
 
 ## Descripción del Proyecto
 
-Este proyecto tiene como objetivo predecir la presencia de enfermedades del corazón en pacientes utilizando técnicas de aprendizaje automático. Se basa en un conjunto de datos que incluye diversas características de salud y está implementado utilizando Python y bibliotecas populares como Pandas, Scikit-learn y Matplotlib.
+Este proyecto tiene como objetivo predecir la presencia de enfermedades del corazón en pacientes utilizando técnicas de aprendizaje automático. Se basa en un conjunto de datos que incluye diversas características de salud y está implementado utilizando Python y bibliotecas populares como Pandas, Scikit-learn y Streamlit.
 
 Puedes ver una demo [aquí](https://arielayala-heart-disease-prediction-python-app-streamlit-rtie9k.streamlit.app/)
 
