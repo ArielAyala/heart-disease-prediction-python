@@ -1,0 +1,16 @@
+# Directorios y archivos a ignorar
+.git
+.gitignore
+.svn
+.hg
+.mypy_cache/
+.pytest_cache/
+env/
+__pycache__/
+*.pyc
+*.swp
+*.bak
+*.tmp
+*.egg-info
+ipynb_checkpoints/
+*.ipynb
