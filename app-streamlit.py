@@ -96,13 +96,13 @@ if uploaded_file:
     input_df = pd.read_csv(uploaded_file)
 else:
     input_df = user_input_features()
-
-# Preprocess input data
-input_df = preprocess_input(input_df)
-
+    
 # Display the input data in the interface
 st.subheader(subheader_input)
 st.write(input_df)
+
+# Preprocess input data
+input_df = preprocess_input(input_df)
 
 # Load the model and make the prediction
 model = load_model()
