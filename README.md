@@ -39,6 +39,14 @@ Navigate to the project directory:
 ```bash
 cd heart-disease-prediction-python
 ```
+Create a virtual environment:
+```bash
+python -m venv venv
+```
+
+Activate the virtual environment:
+- Windows: ```venv\Scripts\activate```
+- Linux/macOS: ```source venv/bin/activate```
 
 To install the necessary dependencies, run the following command (ensure you have Python and pip installed on your system):
 ```bash
@@ -50,3 +58,11 @@ Run the app:
 Streamlit run app-streamlit.py
 ```
 
+### Using Docker
+Or just run the app using docker.
+You have a ```Dockerfile```, ```docker-compose.yml```, and ```.dockerignore``` file in your project root.
+
+Build and run the Docker image:
+```bash
+docker-compose up -d
+```
